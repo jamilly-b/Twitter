@@ -9,78 +9,82 @@
 </head>
 <body>
     <div id="twitter">
+        <!-- Menu -->
         <div id="left-side">
-            <div id="nav-bar">
-                <img src="twitter-icons/png/twitter-logo.png" alt="twitter"> 
+            <nav>
+                <img src="twitter-icons/png/twitter-logo.png" alt="twitter" id="logo-tt"> 
                 <div id="menu">
                     <ul>
-                        <img src="twitter-icons/svg/twitter-home.svg"></img>
-                        <li>Home</li> 
-                        <img src="twitter-icons/svg/twitter-hashtag.svg" alt="">
-                        <li>Explore</li> 
-                        <img src="twitter-icons/svg/twitter-alert.svg" alt="">
-                        <li>Notifications</li> 
-                        <img src="twitter-icons/svg/twitter-message.svg" alt="">
-                        <li>Messages</li> 
-                        <img src="twitter-icons/svg/twitter-globe-2.svg" alt="">
-                        <li>Bookmarks</li> 
-                        <img src="twitter-icons/svg/twitter-lists.svg" alt="">
-                        <li>Lists</li> 
-                        <img src="twitter-icons/svg/twitter-globe-2.svg" alt="">
-                        <li>Profile</li> 
-                        <img src="twitter-icons/svg/twitter-globe-2.svg" alt="">
-                        <li>More</li> 
+                        <li><a href="/home"><img src="twitter-icons/svg/twitter-home.svg"/>Home</a></li> 
+                        <li><a href="#"><img src="twitter-icons/svg/twitter-hashtag.svg" alt="">Explore</a></li> 
+                        <li><a href="#"><img src="twitter-icons/svg/twitter-alert.svg" alt="">Notifications</a></li> 
+                        <li><a href="#"><img src="twitter-icons/svg/twitter-message.svg" alt="">Messages</a></li> 
+                        <li><a href="#"><img src="twitter-icons/png/twitter-bookmark.png" alt="bookmarks">Bookmarks</a></li> 
+                        <li><a href="#"><img src="twitter-icons/svg/twitter-lists.svg" alt="">Lists</a></li> 
+                        <li><a href="#"><img src="twitter-icons/users-icon/choquei.jpg" alt="">Profile</a></li> 
+                        <li><a href="#"><img src="twitter-icons/png/twitter-viewmore.png" alt="">More</a></li> 
+                        <button id="b1">Tweet</button>
                     </ul>
                 </div>
-                <button>Tweet</button>
-            </div>
+            </nav>
         </div>
-        <!-- Escrever tweet -->
-        <script src="post.js"></script>
         <div id="middle-content">
+            <script src="post.js"></script>
+            <!-- Novo Tweet -->
             <div id="new-tweet">
                 <h1>Home</h1>
-                <div class="profile-pic"></div>
-                <div id="write-tweet">
-                    <input type="text" placeholder="What's happening?" id="text-tweet"></div>
-                <div id="insert">
-                    <img src="twitter-icons/svg/twitter-image.svg" alt="">
-                    <img src="twitter-icons/svg/twitter-gif.svg" alt="">
-                    <img src="twitter-icons/svg/twitter-align.svg" alt="">
-                    <img src="twitter-icons/svg/" alt="">
+                <div id="create-tweet">
+                    <div class="profile-pic" id="userpic1">
+                        <img src="twitter-icons/users-icon/choquei.jpg" alt="">
+                    </div>
+                    <div id="write-tweet">
+                        <input class="write" id="text-tweet" type="text" placeholder="What's happening?">
+                        <div id="insert">
+                            <div id="add-content-icons">
+                                <img src="twitter-icons/svg/twitter-image.svg" alt="" class="icon-feed">
+                                <img src="twitter-icons/svg/twitter-gif.svg" alt="" class="icon-feed">
+                                <img src="twitter-icons/svg/twitter-align.svg" alt="" class="icon-feed">
+                                <img src="twitter-icons/svg/" alt="" >
+                            </div>
+                            <div id="send-tweet">
+                                <button onclick="newPost()">Tweet</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="send-tweet">
-                    <button onclick="newPost()">Tweet</button>
-                </div>
+                <hr>
             </div>
-        
-        <!-- Timeline -->
+            <!-- Timeline -->
             <div id="timeline">
                 <ul id="lista-posts">
                     <li class="post">
-                        <div id="user-icon">
-                            <img src="" alt="">
-                        </div>
-                        <div id="user-data"> 
-                            <span id="name">nome</span>
-                            <span id="username">@username</span>
-                        </div>
-                        <div id="tweet-content">
-                            <p id="tweet-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, hic.</p>
-                            <img id="tweet-img" src="" alt="">
+                        <div class="content-box">
+                            <div class="user-icon-post">
+                                <img src="/twitter-icons/users-icon/kanye.jpg" alt="">
+                            </div>
+                            <div class="div2"> 
+                                <div class="user-data"> 
+                                    <span id="name">nome</span>
+                                    <span id="username">@username</span>
+                                </div>
+                                <div class="tweet-content">
+                                    <p id="tweet-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, hic.</p>
+                                    <img id="tweet-img" src="" alt="">
+                                </div>
+                                <div class="interactions"></div>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
 
+        <!-- Lado direito -->
         <div id="right-side"> 
-            <div id="search">
-                <input type="search" name="" id="" placeholder="Search Twitter">
-            </div>
-            <div id="trending">
-
-            </div>
+        <div id="search">
+            <input type="search" name="" id="" placeholder="Search Twitter">
+        </div>
+        <div id="trending">
         </div>
     </div>
 </body>
