@@ -78,12 +78,6 @@ nav #logo-tt{
     color: #1DA2F2;
 }
 
-hr{
-    margin: 10px 0px;
-    border: 1px solid rgba(154, 153, 153, 0.541);
-}
-
-
 
 
 /* Meio */
@@ -99,6 +93,8 @@ hr{
 }
 #new-tweet{
     height: 200px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid rgba(211, 211, 211, 0.867);
 }
 #new-tweet h1{
     margin: 0%;
@@ -189,6 +185,7 @@ li .tweet-content{
 }
 li .div2{
     padding: 0% 1% 1% 1%;
+    width: 100%;
 }
 li .user-data #name{
     font-weight: bolder;
@@ -197,6 +194,20 @@ li .user-data #username{
     font-weight: lighter;
     color: #b0b0b0;
 }
+
+li .interactions{
+    display: flex;
+    justify-content: space-between;
+}
+
+li #retweet-active{
+    display: none;
+}
+
+li #active-like{
+    display: none;
+}
+
 
 
 /* Lado direito */
@@ -215,4 +226,8 @@ li .user-data #username{
 
 #search input::placeholder {
     text-align: center;
+}
+
+hr{
+    border: 3px solid #b3b6b8;
 }

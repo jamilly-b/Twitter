@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    <script src="script.js"></script>
+    <script src="tweets.js"></script>
     <div id="twitter">
         <!-- Menu -->
         <div id="left-side">
@@ -16,43 +18,40 @@
                 <div id="menu">
                     <ul>
                         <li><a href="/home"><img src="twitter-icons/svg/twitter-home.svg"/>Home</a></li> 
-                        <li><a href="#"><img src="twitter-icons/svg/twitter-hashtag.svg" alt="">Explore</a></li> 
-                        <li><a href="#"><img src="twitter-icons/svg/twitter-alert.svg" alt="">Notifications</a></li> 
-                        <li><a href="#"><img src="twitter-icons/svg/twitter-message.svg" alt="">Messages</a></li> 
+                        <li><a href="#"><img src="twitter-icons/svg/twitter-hashtag.svg"  >Explore</a></li> 
+                        <li><a href="#"><img src="twitter-icons/svg/twitter-alert.svg"  >Notifications</a></li> 
+                        <li><a href="#"><img src="twitter-icons/svg/twitter-message.svg"  >Messages</a></li> 
                         <li><a href="#"><img src="twitter-icons/png/twitter-bookmark.png" alt="bookmarks">Bookmarks</a></li> 
-                        <li><a href="#"><img src="twitter-icons/svg/twitter-lists.svg" alt="">Lists</a></li> 
-                        <li><a href="#"><img src="twitter-icons/users-icon/choquei.jpg" alt="">Profile</a></li> 
-                        <li><a href="#"><img src="twitter-icons/png/twitter-viewmore.png" alt="">More</a></li> 
+                        <li><a href="#"><img src="twitter-icons/svg/twitter-lists.svg"  >Lists</a></li> 
+                        <li><a href="#"><img class="profile-pic" src="twitter-icons/users-icon/choquei.jpg"  >Profile</a></li> 
+                        <li><a href="#"><img src="twitter-icons/png/twitter-viewmore.png"  >More</a></li> 
                         <button id="b1">Tweet</button>
                     </ul>
                 </div>
             </nav>
         </div>
         <div id="middle-content">
-            <script src="post.js"></script>
             <!-- Novo Tweet -->
             <div id="new-tweet">
                 <h1>Home</h1>
                 <div id="create-tweet">
                     <div class="profile-pic" id="userpic1">
-                        <img src="twitter-icons/users-icon/choquei.jpg" alt="">
+                        <img src="twitter-icons/users-icon/choquei.jpg"  >
                     </div>
                     <div id="write-tweet">
                         <input class="write" id="text-tweet" type="text" placeholder="What's happening?">
                         <div id="insert">
                             <div id="add-content-icons">
-                                <img src="twitter-icons/svg/twitter-image.svg" alt="" class="icon-feed">
-                                <img src="twitter-icons/svg/twitter-gif.svg" alt="" class="icon-feed">
-                                <img src="twitter-icons/svg/twitter-align.svg" alt="" class="icon-feed">
-                                <img src="twitter-icons/svg/" alt="" >
+                                <img src="twitter-icons/svg/twitter-image.svg"   class="icon-feed">
+                                <img src="twitter-icons/svg/twitter-gif.svg"   class="icon-feed">
+                                <img src="twitter-icons/svg/twitter-align.svg"   class="icon-feed">
                             </div>
-                            <div id="send-tweet">
-                                <button onclick="newPost()">Tweet</button>
+                            <div id="tweet-button">
+                                <button onclick="newPost()" id="send-tweet">Tweet</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <hr>
             </div>
             <!-- Timeline -->
             <div id="timeline">
@@ -60,7 +59,7 @@
                     <li class="post">
                         <div class="content-box">
                             <div class="user-icon-post">
-                                <img src="/twitter-icons/users-icon/kanye.jpg" alt="">
+                                <img src="/twitter-icons/users-icon/kanye.jpg">
                             </div>
                             <div class="div2"> 
                                 <div class="user-data"> 
@@ -69,9 +68,24 @@
                                 </div>
                                 <div class="tweet-content">
                                     <p id="tweet-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, hic.</p>
-                                    <img id="tweet-img" src="" alt="">
                                 </div>
-                                <div class="interactions"></div>
+                                <div class="interactions">
+                                    <div>
+                                        <img src="/twitter-icons/svg/twitter-reply-outline.svg">
+                                        <span id="qtdReply"> </span>
+                                    </div>
+                                    <div>
+                                        <img src="/twitter-icons/svg/twitter-retweet.svg" id="no-retweet" onclick="retweet()">
+                                        <img src="/twitter-icons/svg/twitter-retweet-colored.svg" id="retweet-active" onclick="removeRetweet()">
+                                        <span id="qtdRT">0</span>
+                                    </div>
+                                    <div>
+                                        <img src="/twitter-icons/svg/twitter-like-outline.svg" onclick="like()" id="no-like">
+                                        <img src="/twitter-icons/svg/twitter-like.svg" onclick="deslike()" id="active-like">
+                                        <span id="qtdLike">0</span>
+                                    </div>
+                                    <img src="/twitter-icons/svg/twitter-link.svg">
+                                </div>
                             </div>
                         </div>
                     </li>
