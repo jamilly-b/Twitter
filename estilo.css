@@ -5,6 +5,8 @@ blue - #1DA2F2
 gray - #E8EAED
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 body{
     margin: 0%;
     padding: 0%;
@@ -17,7 +19,7 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     flex-grow: 1;
-    font-family: sans-serif;
+    font-family: "Ubuntu", 'Helvetica Neue', 'Open Sans',  sans-serif;
 }
 button{
     background-color: #1DA2F2;
@@ -187,8 +189,14 @@ li .div2{
     padding: 0% 1% 1% 1%;
     width: 100%;
 }
+
+li .user-data{
+    display: flex;
+    justify-content:space-between;
+}
 li .user-data #name{
-    font-weight: bolder;
+    font-weight: bold;
+    font-family: "Segoe UI", "Roboto", "Helvetica", "Arial",sans-serif;
 }
 li .user-data #username{
     font-weight: lighter;
@@ -198,6 +206,16 @@ li .user-data #username{
 li .interactions{
     display: flex;
     justify-content: space-between;
+}
+
+li .interactions div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li .interactions div span{
+    margin: 0px 5px;
 }
 
 li #retweet-active{

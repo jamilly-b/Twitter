@@ -1,3 +1,5 @@
+"use strict";
+
 function retweet() {
   // muda a cor da imagem
   document.getElementById("no-retweet").style.display = "none";
