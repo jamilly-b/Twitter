@@ -29,7 +29,7 @@ function newPost(){
                 <span id="name">${name}</span>
                 <span id="username">${username}</span>
             </div>
-            <img src="/twitter-icons/png/twitter-delete.png" alt="deletar tweet" id="del">
+            <img src="/twitter-icons/png/twitter-delete.png" alt="deletar tweet" class="del">
         </div>
         <div class="tweet-content">
             <p id="tweet-text">${p}</p>
@@ -40,14 +40,14 @@ function newPost(){
                 <span id="qtdReply"> </span>
             </div>
             <div>
-                <img src="/twitter-icons/svg/twitter-retweet.svg" id="no-retweet" onclick="retweet()">
-                <img src="/twitter-icons/svg/twitter-retweet-colored.svg" id="retweet-active" onclick="removeRetweet()">
+            <img src="/twitter-icons/svg/twitter-retweet.svg" class="no-retweet" onclick="retweet(${id})" id="noRT${id}">
+            <img src="/twitter-icons/svg/twitter-retweet-colored.svg" class="retweet-active" onclick="retweet(${id})" id="activeRT${id}">
                 <span id="qtdRT">0</span>
             </div>
             <div>
-                <img src="/twitter-icons/svg/twitter-like-outline.svg" onclick="like()" id="no-like">
-                <img src="/twitter-icons/svg/twitter-like.svg" onclick="deslike()" id="active-like">
-                <span id="qtdLike">0</span>
+                <img src="/twitter-icons/svg/twitter-like-outline.svg" onclick ="likeDeslike(${id})" class="no-like" id="noLike${id}">
+                <img src="/twitter-icons/svg/twitter-like.svg" onclick ="likeDeslike(${id})" class="active-like" id="activeLike${id}">
+                <span id="qtdLike${id}">0</span>
             </div>
             <img src="/twitter-icons/svg/twitter-link.svg">
         </div>
@@ -87,20 +87,25 @@ document.addEventListener("DOMContentLoaded", function () {
 //deleta tweet
 document.addEventListener("DOMContentLoaded", function () {
 
-    let botaoDelete = document.getElementById("del");
+    let botoesDel = document.getElementsByClassName("del");
     let ul = document.getElementById("lista-posts");
-
-    botaoDelete.addEventListener("click", function(){
-        let postSelecionado = document.getElementById(`li${id}`);
-        if (postSelecionado) {
-            let confirmacao = confirm("Deseja excluir o item?");
-            if(confirmacao){
-                ul.removeChild(postSelecionado);
+    console.log(document.querySelectorAll('.del'));
+    
+    for (let i in botoesDel){
+        console.log(i);
+        i.addEventListener("click", function(){
+            let postSelecionado = document.getElementById(`li${id}`);
+            if (postSelecionado) {
+                let confirmacao = confirm("Deseja excluir o item?");
+                if(confirmacao){
+                    ul.removeChild(postSelecionado);
+                }
             }
-        }
-    });
-
+        });
+    }
 });
+
+
 
 // var filhoRemovido = elemento.removeChild(filho);
 // elemento.removeChild(filho);

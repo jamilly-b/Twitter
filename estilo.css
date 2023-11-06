@@ -218,11 +218,11 @@ li .interactions div span{
     margin: 0px 5px;
 }
 
-li #retweet-active{
+li .retweet-active{
     display: none;
 }
 
-li #active-like{
+li .active-like{
     display: none;
 }
 

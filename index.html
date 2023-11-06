@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <script src="script.js"></script>
-    <script src="newPost.js"></script>
-    <script src="array.js"> </script>
     <div id="twitter">
         <!-- Menu -->
         <div id="left-side">
@@ -24,7 +21,7 @@
                         <li><a href="#"><img src="twitter-icons/svg/twitter-message.svg"  >Messages</a></li> 
                         <li><a href="#"><img src="twitter-icons/png/twitter-bookmark.png" alt="bookmarks">Bookmarks</a></li> 
                         <li><a href="#"><img src="twitter-icons/svg/twitter-lists.svg"  >Lists</a></li> 
-                        <li><a href="#"><img class="profile-pic" src="twitter-icons/users-icon/choquei.jpg"  >Profile</a></li> 
+                        <li><a href="#"><img class="profile-pic" src="twitter-icons/users-icon/choquei.jpg">Profile</a></li> 
                         <li><a href="#"><img src="twitter-icons/png/twitter-viewmore.png"  >More</a></li> 
                         <button id="b1">Tweet</button>
                     </ul>
@@ -57,7 +54,7 @@
             <!-- Timeline -->
             <div id="timeline">
                 <ul id="lista-posts">
-                    <li class="post">
+                    <!-- <li class="post">
                         <div class="content-box">
                             <div class="user-icon-post">
                                 <img src="twitter-icons/users-icon/choquei.jpg">
@@ -68,7 +65,7 @@
                                         <span id="name">CHOQUEI</span>
                                         <span id="username">@choquei</span>
                                     </div>
-                                    <img src="/twitter-icons/png/twitter-delete.png" alt="deletar tweet" id="del">
+                                    <img src="/twitter-icons/png/twitter-delete.png" alt="deletar tweet" class="del">
                                 </div>
                                 <div class="tweet-content">
                                     <p id="tweet-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, hic.</p>
@@ -92,18 +89,21 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
 
         <!-- Lado direito -->
-        <div id="right-side"> 
+        <div id="right-side">
         <div id="search">
             <input type="search" name="" id="" placeholder="Search Twitter">
         </div>
         <div id="trending">
         </div>
     </div>
+    <script src="script.js"></script>
+    <script src="post.js"></script>
+    <!-- <script src="newPost.js"></script> -->
 </body>
 </html>
