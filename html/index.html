@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="shortcut icon" href="twitter-icons/png/twitter-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+    <div id="twitter">
+        <!-- Menu -->
+        <div id="left-side">
+            <nav>
+                <img src="/twitter-icons/png/twitter-logo.png" alt="twitter" id="logo-tt"> 
+                <div id="menu">
+                    <ul>
+                        <li><a href="/home"><img src="/twitter-icons/svg/twitter-home.svg"/>Home</a></li> 
+                        <li><a href="#"><img src="/twitter-icons/svg/twitter-hashtag.svg"  >Explore</a></li> 
+                        <li><a href="#"><img src="/twitter-icons/svg/twitter-alert.svg"  >Notifications</a></li> 
+                        <li><a href="#"><img src="/twitter-icons/svg/twitter-message.svg"  >Messages</a></li> 
+                        <li><a href="#"><img src="/twitter-icons/png/twitter-bookmark.png" alt="bookmarks">Bookmarks</a></li> 
+                        <li><a href="#"><img src="/twitter-icons/svg/twitter-lists.svg"  >Lists</a></li> 
+                        <li><a href="#"><img class="profile-pic" src="/twitter-icons/users-icon/choquei.jpg">Profile</a></li> 
+                        <li><a href="#"><img src="/twitter-icons/png/twitter-viewmore.png"  >More</a></li> 
+                        <button id="b1">Tweet</button>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="middle-content">
+            <!-- Escrever novo Tweet -->
+            <div id="new-tweet">
+                <h1>Home</h1>
+                <div id="create-tweet">
+                    <div class="profile-pic" id="userpic1">
+                        <img src="/twitter-icons/users-icon/choquei.jpg"  >
+                    </div>
+                    <div id="write-tweet">
+                        <input class="write" id="text-tweet" type="text" placeholder="What's happening?">
+                        <div id="insert">
+                            <div id="add-content-icons">
+                                <img src="/twitter-icons/svg/twitter-image.svg"   class="icon-feed">
+                                <img src="/twitter-icons/svg/twitter-gif.svg"   class="icon-feed">
+                                <img src="/twitter-icons/svg/twitter-align.svg"   class="icon-feed">
+                            </div>
+                            <div id="tweet-button">
+                                <button id="send-tweet">Tweet</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Timeline -->
+            <div id="timeline">
+                <ul id="lista-posts"></ul>
+            </div>
+        </div>
+
+        <!-- Lado direito -->
+        <div id="right-side">
+        <div id="search">
+            <input type="search" name="" id="" placeholder="Search Twitter">
+        </div>
+        <div id="trending">
+        </div>
+    </div>
+    <script src="/js/interacoes.js"></script>
+    <script src="/js/posts.js"></script>
+</body>
+</html>
